@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Reading Room</h1>
+            <div class="slogan">
+                <p>Learn</p>
+                <p>Explore</p>
+                <p>Grow</p>
+            </div>
+        </header>
+        <main>
+            <div class="books"></div>
+            <form action="#" method="post" class="add-book">
+
+                <h2>Want to add a book to the library?</h2>
+                <p>Complete the form below</p>
+                
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required placeholder="The Hobbit">
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" required placeholder="J. R. R. Tolkien">
+                </div>
+
+                <div class="form-group">
+                    <label for="pages">Pages</label>
+                    <input type="number" id="pages" name="pages" required placeholder="370">
+                </div>
+
+                <div class="form-group">
+                    <label for="read">Read (yes, no)</label>
+                    <input type="text" id="read" name="read" required placeholder="yes">
+                </div>
+
+                <button type="submit">Submit</button>
+                
+
+            </form>
+        </main>
+        <footer>
+            <p>The Reading Room</p>
+            <p>created by tshamsiddin</p>
+            <p><a href="https://github.com/tshamsiddin" target="_blank">https://github.com/tshamsiddin</a></p>
+        </footer>
+    </div>
+</body>
+</html>
