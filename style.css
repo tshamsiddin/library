@@ -115,7 +115,7 @@ header h1{
 .books{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 15px;
+    gap: 70px;
 }
 
 .book{
