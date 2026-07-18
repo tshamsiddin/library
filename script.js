@@ -20,7 +20,7 @@ function addBookToLibrary(author, title, pages, read) {
     return book;    
 }
 
-for (let i=1; i<=15;i++){
+for (let i=1; i<=9;i++){
 
     addBookToLibrary(
         `Author ${i}`,
@@ -62,7 +62,7 @@ function displayBook(bookToAdd){
     book.classList.add("book");
 
     const icon=document.createElement("i");
-    icon.classList.add("mdi", "mdi-book-open-page-variant");
+    icon.classList.add("mdi", "mdi-book-open-page-variant", "book-icon");
 
     const title=document.createElement("h2");
     title.classList.add("book-title");
@@ -82,8 +82,16 @@ function displayBook(bookToAdd){
     const readButton=document.createElement("button");
     readButton.classList.add("read-button");
 
-    const readIcon=document.createElement("i");
-    readIcon.classList.add("mdi", "mdi-refresh", "read-icon");
+    // const readIcon=document.createElement("i");
+    // readIcon.classList.add("mdi", "mdi-book-check", "read-icon");
+
+    const readIcon = document.createElement("i");
+
+    readIcon.classList.add(
+        "mdi",
+        "read-icon",
+        bookToAdd.read ? "mdi-book-check" : "mdi-book-outline"
+    );
 
     const removeButton=document.createElement("button");
     removeButton.classList.add("remove-button");
@@ -107,6 +115,8 @@ function displayBook(bookToAdd){
 
     readButton.addEventListener('click', () => {
         bookToAdd.read=!bookToAdd.read;
+        readIcon.classList.toggle("mdi-book-check", bookToAdd.read);
+        readIcon.classList.toggle("mdi-book-outline", !bookToAdd.read);
         readText.textContent=`${bookToAdd.read ? 'already read' : 'not read yet'}`;
     })
 
@@ -137,6 +147,3 @@ form.addEventListener('submit', (e) => {
 })
 
 myLibrary.forEach(displayBook);
-
-// Event Listeners
-
