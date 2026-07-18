@@ -82,9 +82,6 @@ function displayBook(bookToAdd){
     const readButton=document.createElement("button");
     readButton.classList.add("read-button");
 
-    // const readIcon=document.createElement("i");
-    // readIcon.classList.add("mdi", "mdi-book-check", "read-icon");
-
     const readIcon = document.createElement("i");
 
     readIcon.classList.add(
